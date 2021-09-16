@@ -4,9 +4,23 @@ import { View, Text } from 'react-native';
 import { styles } from './styles';
 import { Button } from '../Button';
 
+import { MotiView } from 'moti';
+
 export function Footer() {
   return (
-    <View>
+    <MotiView
+      from={{
+        opacity: 0
+      }}
+
+      animate={{
+        opacity: 1
+      }}
+      transition= {{
+        type:'timing',
+        duration: 3000
+      }}
+    >
       <Text style={styles.label}>
         Detail
       </Text>
@@ -23,6 +37,6 @@ export function Footer() {
 
         <Button />
       </View>
-    </View>
+    </MotiView>
   );
 }
